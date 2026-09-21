@@ -1,0 +1,2077 @@
+
+/* =========================================================
+   RESPONSIVE FINAL PATCH
+   Targets the current Imajireka Academy markup.
+   Designed for Chrome DevTools / mobile simulator extensions.
+========================================================= */
+
+html { width: 100%; max-width: 100%; overflow-x: hidden; }
+body { width: 100%; max-width: 100%; min-width: 0; overflow-x: hidden; }
+img, svg, video, iframe { max-width: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.site-header { width: 100%; }
+.nav-wrap { width: 100%; min-width: 0; }
+
+@media (max-width: 1100px) {
+  .nav-wrap { gap: 20px; padding-inline: 24px; }
+  .desktop-nav { gap: 14px; }
+  .desktop-nav a { font-size: 9px; }
+  .academy-hero-main { padding-inline: 32px; }
+  .discover, .philosophy, .classes-reference, .faq, .contact { padding-left: 32px; padding-right: 32px; }
+  .philosophy-inner { gap: 45px; }
+  .philosophy-photo-frame { width: 88%; }
+  .classes-ref-heading { grid-template-columns: 1fr .7fr; }
+  .classes-ref-grid { grid-template-columns: 1fr; }
+  .classes-ref-card { min-width: 0; }
+  .process { grid-template-columns: 1fr; gap: 70px; }
+  .process-title { text-align: center; }
+  .process-visual { grid-template-columns: repeat(5, minmax(0,1fr)); }
+  .student-gallery-mosaic { grid-template-columns: 1fr 1fr; }
+  .grow-journey { grid-template-columns: 1fr; }
+  .contact-head { gap: 45px; }
+  .footer-main { grid-template-columns: 1.5fr 1fr 1fr; gap: 30px; }
+}
+
+@media (max-width: 850px) {
+  body { padding-top: 72px; }
+
+  .site-header { height: 72px; }
+  .nav-wrap { height: 72px; padding: 0 20px; gap: 12px; }
+  .brand img { width: 88px; }
+  .brand span { font-size: 7px; letter-spacing: 1.5px; }
+  .desktop-nav, .nav-cta, .nav-right > .language-dropdown { display: none; }
+
+  .nav-right { margin-left: auto; gap: 8px; }
+  .menu-toggle {
+    display: flex !important;
+    width: 42px; height: 42px;
+    padding: 0; border: 0; border-radius: 50%;
+    background: var(--orange);
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 0; cursor: pointer; flex-shrink: 0;
+  }
+  .menu-toggle span { width: 18px; height: 2px; background: #fff; border-radius: 99px; margin: 0; }
+
+  .mobile-nav {
+    position: absolute;
+    top: 72px; left: 12px; right: 12px;
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 12px 18px 18px;
+    background: rgba(255,253,249,.98);
+    border: 1px solid #e5dfd7;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 18px 35px rgba(0,0,0,.12);
+    z-index: 1001;
+  }
+  .mobile-nav.open { display: grid; }
+  .mobile-nav > a {
+    padding: 13px 2px;
+    color: #444;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+  }
+  .mobile-nav > a:last-child { border-bottom: 0; }
+  .mobile-nav .mobile-cta {
+    margin-top: 12px;
+    padding: 12px 16px;
+    text-align: center;
+    background: var(--orange);
+    color: #fff;
+    border-radius: 999px;
+  }
+
+  .academy-hero-exact {
+    margin-top: 0;
+    min-height: auto;
+  }
+  .academy-hero-main {
+    width: 100%;
+    padding: 55px 24px 20px;
+  }
+  .academy-hero-copy { width: 100%; max-width: 680px; }
+  .academy-hero-kicker {
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  }
+  .academy-hero-copy h1 {
+    font-size: clamp(48px, 10vw, 76px);
+    letter-spacing: -2.5px;
+    line-height: .95;
+  }
+  .academy-hero-copy > p:not(.academy-hero-kicker) {
+    max-width: 540px;
+    margin-inline: auto;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+  .academy-hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .academy-four-kids {
+    width: min(100%, 620px);
+    margin: 10px auto 0;
+  }
+  .academy-hero-trust {
+    padding: 15px 24px 35px;
+  }
+  .trust-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 25px;
+  }
+
+  .discover, .philosophy, .classes-reference, .faq, .contact {
+    padding-left: 24px; padding-right: 24px;
+  }
+  .discover { padding-top: 75px; }
+  .discover-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+  .discover-title-wrap { text-align: left; }
+  .discover-title-wrap h2 { font-size: clamp(48px, 9vw, 72px); letter-spacing: -2.5px; }
+  .discover-title-wrap p { margin-left: 0; }
+  .discover-cards { grid-template-columns: 1fr; gap: 30px; }
+  .discover-card { max-width: 620px; width: 100%; margin-inline: auto; }
+
+  .philosophy { padding-top: 75px; padding-bottom: 75px; }
+  .philosophy-inner { grid-template-columns: 1fr; gap: 45px; }
+  .philosophy-visual { min-height: 480px; width: min(100%, 620px); margin-inline: auto; }
+  .philosophy-photo-frame { width: 86%; height: 430px; left: 0; }
+  .philosophy-sticker { right: 0; top: 35px; }
+  .philosophy-content { width: 100%; }
+  .philosophy-content h2 { font-size: clamp(46px, 9vw, 70px); }
+
+  .classes-reference { padding-top: 75px; }
+  .classes-ref-heading {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin: 0 0 35px;
+  }
+  .classes-ref-heading h2 { font-size: clamp(48px, 9vw, 72px); letter-spacing: -2.5px; }
+  .classes-ref-grid { grid-template-columns: 1fr; }
+  .classes-ref-card { overflow: hidden; }
+  .ref-card-main { grid-template-columns: 1fr; }
+  .ref-card-photo { min-height: 250px; }
+
+  .process { padding-left: 24px; padding-right: 24px; }
+  .process-visual { grid-template-columns: 1fr; gap: 22px; }
+  .process-line { display: none; }
+  .process-step { display: grid; grid-template-columns: 42px 70px 1fr; gap: 12px; align-items: center; text-align: left; }
+  .process-dot { width: 60px; height: 60px; margin: 0; }
+  .process-step h3 { font-size: 18px; }
+  .process-step p { font-size: 10px; }
+
+  .student-gallery-fullbleed { padding-left: 24px; padding-right: 24px; }
+  .student-gallery-header { grid-template-columns: 1fr; gap: 20px; }
+  .student-gallery-mosaic { grid-template-columns: 1fr 1fr; }
+  .gallery-tile-main { grid-column: span 2; }
+  .grow-journey-inner { grid-template-columns: 1fr; }
+
+  .faq { padding-top: 75px; }
+  .faq-heading { grid-template-columns: 1fr; gap: 20px; }
+  .faq-heading h2 { font-size: clamp(52px, 10vw, 76px); letter-spacing: -3px; }
+  .faq-layout { grid-template-columns: 1fr; gap: 25px; }
+  .faq-side { min-height: 270px; }
+
+  .contact { padding-top: 75px; }
+  .contact-head { grid-template-columns: 1fr; gap: 20px; }
+  .contact-head h2 { font-size: clamp(50px, 10vw, 75px); }
+  .contact-card { grid-template-columns: 1fr; }
+  .contact-main { border-right: 0; border-bottom: 1px solid #e1dbd2; }
+  .contact-actions { flex-wrap: wrap; }
+
+  .footer-main { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .nav-wrap { padding-inline: 15px; }
+  .brand img { width: 82px; }
+  .brand span { font-size: 6.5px; padding-left: 7px; }
+  .menu-toggle { width: 40px; height: 40px; }
+
+  .academy-hero-main { padding: 42px 16px 15px; }
+  .academy-hero-kicker { font-size: 7px; letter-spacing: 1.5px; }
+  .academy-hero-copy h1 { font-size: clamp(43px, 12vw, 61px); }
+  .academy-hero-copy > p:not(.academy-hero-kicker) { font-size: 10px; }
+  .academy-hero-buttons { width: 100%; flex-direction: column; align-items: stretch; gap: 10px; }
+  .academy-hero-buttons a,
+  .academy-hero-buttons button { width: 100%; justify-content: center; }
+  .academy-four-kids {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 10px;
+    width: 100%;
+    padding: 0 5px;
+  }
+  .academy-four-kids .hero-kid {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 180px !important;
+    transform: none !important;
+  }
+  .academy-four-kids .hero-kid img { width: 100%; height: 100%; object-fit: cover; }
+
+  .academy-hero-trust { padding: 10px 16px 30px; }
+  .academy-hero-trust > p { font-size: 9px; }
+  .trust-items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .trust-items span { font-size: 8px; line-height: 1.35; }
+
+  .discover, .philosophy, .classes-reference, .faq, .contact {
+    padding-left: 16px; padding-right: 16px;
+  }
+  .discover { padding-top: 60px; padding-bottom: 55px; }
+  .discover-label { font-size: 8px; }
+  .discover-title-wrap h2 { font-size: clamp(42px, 12vw, 58px); letter-spacing: -2px; }
+  .discover-title-wrap p { font-size: 9px; line-height: 1.65; }
+  .discover-cards { gap: 22px; }
+  .discover-image { min-height: 250px; }
+  .discover-copy h3 { font-size: 30px; }
+  .discover-copy p { font-size: 9px; }
+  .discover-footer { flex-wrap: wrap; gap: 8px; }
+
+  .philosophy { padding-top: 60px; padding-bottom: 60px; }
+  .philosophy-inner { gap: 30px; }
+  .philosophy-visual { min-height: 350px; }
+  .philosophy-photo-frame { height: 315px; width: 88%; border-radius: 8px 48px 8px 48px; }
+  .philosophy-sticker { width: 95px; height: 95px; top: 20px; }
+  .philosophy-sticker strong { font-size: 20px; }
+  .philosophy-content h2 { font-size: clamp(40px, 11vw, 56px); letter-spacing: -2px; }
+  .philosophy-lead { font-size: 10px !important; line-height: 1.7; }
+  .philosophy-principles { gap: 0; }
+  .principle { grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 0; }
+  .principle h3 { font-size: 16px; }
+  .principle p { font-size: 9px; line-height: 1.55; }
+
+  .classes-reference { padding-top: 60px; padding-bottom: 55px; }
+  .classes-ref-heading h2 { font-size: clamp(43px, 11vw, 59px); }
+  .classes-ref-subtitle { font-size: 10px; }
+  .classes-ref-card { padding: 18px !important; border-radius: 18px; }
+  .ref-card-top { flex-wrap: wrap; gap: 8px; }
+  .ref-card-main { gap: 18px; }
+  .ref-card-photo { min-height: 210px; }
+  .ref-card-title h3 { font-size: 30px; }
+  .ref-card-title h4 { font-size: 22px; }
+  .ref-card-title p { font-size: 9px; line-height: 1.55; }
+  .ref-syllabus > div { grid-template-columns: 25px 1fr; gap: 8px; padding: 9px 0; }
+  .ref-syllabus span { font-size: 8px; }
+  .classes-ref-footer { flex-direction: column; align-items: stretch; }
+
+  .process { padding: 55px 16px; }
+  .process-title h2 { font-size: clamp(40px, 11vw, 55px); }
+  .process-title p { font-size: 9px; }
+  .process-step { grid-template-columns: 30px 55px 1fr; gap: 8px; }
+  .process-dot { width: 50px; height: 50px; }
+  .process-step h3 { font-size: 15px; }
+  .process-step p { font-size: 8px; line-height: 1.5; }
+
+  .student-gallery-fullbleed { padding-left: 16px; padding-right: 16px; }
+  .student-gallery-header { margin-bottom: 28px; }
+  .student-gallery-title { font-size: clamp(42px, 11vw, 58px); letter-spacing: -2px; }
+  .student-gallery-intro { font-size: 9px; line-height: 1.6; }
+  .student-gallery-mosaic { grid-template-columns: 1fr; gap: 10px; }
+  .gallery-tile-main { grid-column: auto; }
+  .gallery-tile { min-height: 230px; }
+  .gallery-category { flex-wrap: wrap; gap: 7px; }
+  .gallery-category button { font-size: 8px; padding: 7px 10px; }
+  .grow-journey-inner { grid-template-columns: 1fr; }
+
+  .faq { padding: 60px 16px 50px; }
+  .faq-heading h2 { font-size: clamp(43px, 11vw, 60px); letter-spacing: -2px; }
+  .faq-copy p { font-size: 9px; }
+  .faq-item summary { grid-template-columns: 30px 1fr 30px; gap: 8px; padding: 17px 0; }
+  .faq-question { font-size: 10px; line-height: 1.35; }
+  .faq-answer { padding: 0 30px 18px 38px; }
+  .faq-answer p { font-size: 8px; line-height: 1.6; }
+  .faq-side { min-height: 235px; padding: 20px; }
+  .faq-side h3 { margin-top: 45px; font-size: 22px; }
+
+  .contact { padding: 60px 16px 45px; }
+  .contact-head h2 { font-size: clamp(43px, 11vw, 59px); letter-spacing: -2px; }
+  .contact-intro { font-size: 9px; }
+  .contact-main { padding: 28px 20px; }
+  .contact-main h3 { font-size: 27px; }
+  .contact-main>p { font-size: 9px; }
+  .contact-actions { flex-direction: column; }
+  .contact-primary{ width: 100%; }
+  .contact-details { padding: 12px 20px; }
+
+  .footer { padding: 50px 16px 18px; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .nav-wrap { padding-inline: 12px; }
+  .brand img { width: 76px; }
+  .brand span { font-size: 6px; }
+  .academy-hero-main { padding-inline: 12px; }
+  .academy-hero-copy h1 { font-size: 40px; }
+  .academy-four-kids .hero-kid { height: 145px !important; }
+  .trust-items { grid-template-columns: 1fr; }
+  .discover, .philosophy, .classes-reference, .faq, .contact,
+  .student-gallery-fullbleed, .process{ padding-left: 12px; padding-right: 12px; }
+  .faq-item summary { grid-template-columns: 25px 1fr 27px; }
+}
+
+/* Avoid accidental horizontal overflow from decorative elements. */
+@media (max-width: 850px) {
+  .academy-hero-bg, .discover:before, .discover:after,
+  .philosophy:before, .philosophy:after,
+  .classes-reference:before, .classes-reference:after,
+  .faq-side:after { pointer-events: none; }
+}
+
+/* =========================================================
+   IPAD / TABLET HORIZONTAL SCROLL PATCH
+   761px - 1199px
+   Keeps the desktop visual density while allowing touch
+   horizontal scrolling inside the affected sections.
+========================================================= */
+@media (min-width: 761px) and (max-width: 1199px) {
+  /* Prevent the page itself from becoming horizontally scrollable. */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- KELAS ---------- */
+  .classes-reference {
+    overflow: hidden;
+  }
+
+  .classes-ref-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 4px 18px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+  }
+
+  .classes-ref-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .classes-ref-card {
+    flex: 0 0 min(78vw, 760px);
+    width: min(78vw, 760px);
+    max-width: none;
+    scroll-snap-align: start;
+    overflow: hidden;
+  }
+
+  .ref-card-main {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 12px;
+  }
+
+  .ref-card-photo {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  /* ---------- ILUSTRASI / DESAIN / BANGUN ---------- */
+  .discover {
+    overflow: hidden;
+  }
+
+  .discover-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 8px 22px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+  }
+
+  .discover-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .discover-card {
+    flex: 0 0 min(72vw, 620px);
+    width: min(72vw, 620px);
+    max-width: none;
+    scroll-snap-align: start;
+  }
+
+  .discover-image {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  /* ---------- CARA KAMI BELAJAR ---------- */
+  .process {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    overflow: hidden;
+  }
+
+  .process-title {
+    width: 100%;
+  }
+
+  .process-visual {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 8px 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+  }
+
+  .process-visual::-webkit-scrollbar {
+    display: none;
+  }
+
+  .process-step {
+    flex: 0 0 175px;
+    width: 175px;
+    scroll-snap-align: start;
+  }
+
+  .process-line {
+    display: block;
+    left: 85px;
+    right: auto;
+    top: 67px;
+    width: 735px;
+  }
+
+  /* Make the scrollable areas visibly indicate that they can be swiped. */
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    cursor: grab;
+  }
+
+  .classes-ref-grid:active,
+  .discover-cards:active,
+  .process-visual:active {
+    cursor: grabbing;
+  }
+}
+
+/* iPad portrait: make the first card partially reveal the next card. */
+@media (min-width: 761px) and (max-width: 900px) {
+  .classes-ref-card {
+    flex-basis: 82vw;
+    width: 82vw;
+  }
+
+  .discover-card {
+    flex-basis: 78vw;
+    width: 78vw;
+  }
+}
+
+/* =========================================================
+   CIRCULAR IMAGE FIX
+   Make Academy class photos and Discover images perfectly round.
+   The pastel background behind the Discover images is also circular
+   and follows the image, instead of stretching into an oval.
+========================================================= */
+.ref-card-photo {
+  width: 170px !important;
+  height: 170px !important;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ref-card-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-image img {
+  width: 245px !important;
+  height: 245px !important;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .ref-card-photo {
+    width: 155px !important;
+    height: 155px !important;
+  }
+
+  .discover-image img {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  .ref-card-photo {
+    width: 145px !important;
+    height: 145px !important;
+  }
+
+  .discover-image img {
+    width: 210px !important;
+    height: 210px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .ref-card-photo {
+    width: 145px !important;
+    height: 145px !important;
+  }
+
+  .discover-image img {
+    width: min(75vw, 245px) !important;
+    height: min(75vw, 245px) !important;
+  }
+}
+
+
+/* Discover / "Mulai dari dirimu" — circular image background */
+.discover-image .image-blob {
+  width: 270px !important;
+  height: 270px !important;
+  left: 50% !important;
+  bottom: 8px !important;
+  transform: translateX(-50%) rotate(-4deg) !important;
+  border-radius: 50% !important;
+}
+
+.card-design .discover-image .image-blob {
+  transform: translateX(-50%) rotate(4deg) !important;
+}
+
+.card-build .discover-image .image-blob {
+  transform: translateX(-50%) rotate(-3deg) !important;
+}
+
+.discover-card:hover .image-blob {
+  transform: translateX(-50%) rotate(0deg) scale(1.04) !important;
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  /* Keep the floating icon visually attached to the image on iPad. */
+  .discover-image .image-icon {
+    left: 11% !important;
+    top: 30px !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+  }
+
+  .discover-image .image-blob {
+    width: 242px !important;
+    height: 242px !important;
+    bottom: 8px !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  .discover-image .image-blob {
+    width: 232px !important;
+    height: 232px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .discover-image .image-blob {
+    width: min(82vw, 265px) !important;
+    height: min(82vw, 265px) !important;
+    bottom: 8px !important;
+  }
+}
+
+/* =========================================================
+   IPAD CLASS PHOTO — TRUE CIRCLE FIX
+   Keep the class photos (Mulai / Tumbuh / Mahir) perfectly
+   circular. The fixed inline/block size prevents the grid
+   from squeezing the image into a vertical oval.
+========================================================= */
+@media (min-width: 761px) and (max-width: 1199px) {
+  .classes-ref-card .ref-card-photo {
+    width: 160px !important;
+    height: 160px !important;
+    min-width: 160px !important;
+    min-height: 160px !important;
+    max-width: 160px !important;
+    max-height: 160px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: block !important;
+    justify-self: center !important;
+    align-self: center !important;
+    flex: none !important;
+  }
+
+  .classes-ref-card .ref-card-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
+
+/* =========================================================
+   CLASS IMAGES — TRUE CIRCLE ON ALL DEVICES
+   The original .ref-card-photo uses a non-circular radius and
+   a fixed height only, which can become an oval when its width
+   changes with the card/grid. Force a square box at every
+   viewport size.
+========================================================= */
+.classes-ref-card .ref-card-photo {
+  width: 170px !important;
+  height: 170px !important;
+  min-width: 170px !important;
+  min-height: 170px !important;
+  max-width: 170px !important;
+  max-height: 170px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  flex: 0 0 170px !important;
+  box-sizing: border-box !important;
+}
+
+.classes-ref-card .ref-card-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* Tablet / iPad */
+@media (min-width: 761px) and (max-width: 1199px) {
+  .classes-ref-card .ref-card-photo {
+    width: 160px !important;
+    height: 160px !important;
+    min-width: 160px !important;
+    min-height: 160px !important;
+    max-width: 160px !important;
+    max-height: 160px !important;
+    flex-basis: 160px !important;
+  }
+}
+
+/* Phone */
+@media (max-width: 760px) {
+  .classes-ref-card .ref-card-photo {
+    width: 135px !important;
+    height: 135px !important;
+    min-width: 135px !important;
+    min-height: 135px !important;
+    max-width: 135px !important;
+    max-height: 135px !important;
+    flex-basis: 135px !important;
+    justify-self: center !important;
+    align-self: center !important;
+  }
+}
+
+/* Very small phones: keep it circular while scaling down. */
+@media (max-width: 380px) {
+  .classes-ref-card .ref-card-photo {
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    min-height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    flex-basis: 120px !important;
+  }
+}
+
+/* =========================================================
+   CLASS CARDS — ALIGN ALL PHOTOS AT THE SAME HEIGHT
+   Keep the three class photos (Mulai / Tumbuh / Mahir)
+   vertically aligned when the card content is side-by-side.
+========================================================= */
+@media (min-width: 761px) {
+  .classes-ref-card .ref-card-main {
+    grid-template-columns: minmax(0, 1fr) 170px !important;
+    align-items: start !important;
+  }
+
+  .classes-ref-card .ref-card-photo {
+    width: 170px !important;
+    height: 170px !important;
+    min-width: 170px !important;
+    min-height: 170px !important;
+    max-width: 170px !important;
+    max-height: 170px !important;
+    aspect-ratio: 1 / 1 !important;
+    align-self: start !important;
+    justify-self: center !important;
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+  .classes-ref-card .ref-card-main {
+    grid-template-columns: minmax(0, 1fr) 160px !important;
+  }
+
+  .classes-ref-card .ref-card-photo {
+    width: 160px !important;
+    height: 160px !important;
+    min-width: 160px !important;
+    min-height: 160px !important;
+    max-width: 160px !important;
+    max-height: 160px !important;
+  }
+}
+
+/* On phones the card is stacked; keep the image centered. */
+@media (max-width: 760px) {
+  .classes-ref-card .ref-card-main {
+    grid-template-columns: 1fr !important;
+    align-items: center !important;
+  }
+
+  .classes-ref-card .ref-card-photo {
+    justify-self: center !important;
+    align-self: center !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE + IPAD LANGUAGE SWITCHER
+   Keep the language control available on small screens.
+========================================================= */
+@media (max-width: 850px) {
+  .nav-right > .language-dropdown {
+    display: block !important;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .nav-right > .language-dropdown .lang-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 50%;
+  }
+
+  .nav-right > .language-dropdown .lang-btn img {
+    width: 22px;
+    height: 15px;
+  }
+
+  .nav-right > .language-dropdown .lang-btn i {
+    font-size: 7px;
+  }
+
+  .nav-right > .language-dropdown .lang-menu {
+    top: 48px;
+    right: 0;
+    min-width: 138px;
+    padding: 6px;
+    z-index: 1100;
+  }
+
+  .nav-right > .language-dropdown .lang-menu button {
+    min-height: 38px;
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+
+  .nav-right > .language-dropdown .lang-menu img {
+    width: 22px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+}
+
+/* =========================================================
+   SWIPE DIRECTION HINTS
+   Persistent left/right arrows for horizontal-scroll sections.
+   Visible on phones and iPad/tablet and never disappear after swiping.
+========================================================= */
+@media (max-width: 1199px) {
+  .classes-reference,
+  .discover,
+  .process {
+    position: relative;
+  }
+
+  .swipe-hint {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .swipe-arrow {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, .96);
+    color: #17212b;
+    box-shadow: 0 6px 18px rgba(20, 30, 40, .16);
+    font-size: 13px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  }
+
+  .swipe-arrow:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 22px rgba(20, 30, 40, .2);
+  }
+
+  .swipe-arrow:active {
+    transform: scale(.95);
+  }
+
+  .swipe-arrow-left { margin-left: 0; }
+  .swipe-arrow-right { margin-right: 0; }
+
+  /* Keep the guidance present even when there is no overflow check yet. */
+  .swipe-hint:not(.has-overflow) {
+    opacity: .82;
+  }
+}
+
+@media (max-width: 760px) {
+  .swipe-hint {
+    left: 5px;
+    right: 5px;
+  }
+
+  .swipe-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   FAQ QUESTION SIZE
+   Make the FAQ titles more readable on every device.
+========================================================= */
+.faq-question {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+@media (max-width: 1199px) {
+  .faq-question {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .faq-question {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+/* =========================================================
+   READABILITY PATCH - SMALL TEXT AREAS
+   ========================================================= */
+
+/* Section labels / breadcrumbs */
+.mini-label,
+.classes-ref-label,
+.faq-side-label,
+.contact-eyebrow {
+  font-size: 11px !important;
+}
+
+/* Process supporting text */
+.process-step > span {
+  font-size: 11px !important;
+}
+.process-step p {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+/* FAQ introduction and supporting copy */
+.faq-copy p {
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+}
+.faq-copy a {
+  font-size: 12px !important;
+}
+.faq-side p {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+.faq-side-btn {
+  font-size: 12px !important;
+}
+.faq-answer p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+/* Footer */
+.footer-main h4 {
+  font-size: 12px !important;
+}
+.footer-main > div:not(.footer-brand) > a {
+  font-size: 12px !important;
+  margin-bottom: 13px;
+}
+.footer-brand p {
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}
+.footer-bottom {
+  font-size: 10px !important;
+}
+
+@media (max-width: 850px) {
+  .mini-label,
+  .classes-ref-label,
+  .faq-side-label,
+  .contact-eyebrow {
+    font-size: 10px !important;
+  }
+
+  .process-step > span {
+    font-size: 10px !important;
+  }
+  .process-step p {
+    font-size: 14px !important;
+  }
+
+  .faq-copy p {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+  }
+  .faq-copy a,
+  .faq-side-btn {
+    font-size: 11px !important;
+  }
+  .faq-side p,
+  .faq-answer p {
+    font-size: 14px !important;
+  }
+
+  .footer-main h4 {
+    font-size: 11px !important;
+  }
+  .footer-main > div:not(.footer-brand) > a,
+  .footer-brand p {
+    font-size: 11px !important;
+  }
+  .footer-bottom {
+    font-size: 9px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .mini-label,
+  .classes-ref-label,
+  .faq-side-label,
+  .contact-eyebrow {
+    font-size: 9px !important;
+  }
+
+  .process-step > span {
+    font-size: 9px !important;
+  }
+  .process-step p {
+    font-size: 13px !important;
+  }
+
+  .faq-copy p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+  .faq-copy a,
+  .faq-side-btn {
+    font-size: 10px !important;
+  }
+  .faq-side p,
+  .faq-answer p {
+    font-size: 13px !important;
+  }
+
+  .footer-main h4 {
+    font-size: 10px !important;
+  }
+  .footer-main > div:not(.footer-brand) > a,
+  .footer-brand p {
+    font-size: 10px !important;
+  }
+  .footer-bottom {
+    font-size: 8px !important;
+  }
+}
+
+/* ===== EXPERIENCE SECTION — enlarge section title and bold CTA ===== */
+.experience-side-label {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 2.2px !important;
+}
+
+.experience-side a {
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 850px) {
+  .experience-side-label {
+    font-size: 12px !important;
+    letter-spacing: 1.8px !important;
+  }
+
+  .experience-side a {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-side-label {
+    font-size: 11px !important;
+    letter-spacing: 1.7px !important;
+  }
+
+  .experience-side a {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+
+/* Smooth scrolling for normal page navigation */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* =========================================================
+   RESPONSIVE STABILITY PATCH — LAST OVERRIDE
+   Fixes viewport behavior in Chrome DevTools / phone simulators.
+   Does not change the desktop design.
+========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.site-header,
+.nav-wrap,
+main,
+section,
+footer,
+header,
+.hero,
+.academy-hero-exact,
+.academy-hero-main,
+.discover,
+.philosophy,
+.classes-reference,
+.process,
+.experience-minimal,
+.student-gallery-fullbleed,
+.grow-journey,
+.faq,
+.contact {
+  max-width: 100%;
+}
+
+img, svg, video, iframe, canvas {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-wrap { padding-left: 20px; padding-right: 20px; }
+
+  .academy-hero-main,
+  .discover,
+  .philosophy,
+  .classes-reference,
+  .faq,
+  .contact,
+  .process,
+  .student-gallery-fullbleed {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .academy-hero-copy,
+  .academy-hero-main,
+  .discover-inner,
+  .philosophy-inner,
+  .classes-reference-inner,
+  .experience-minimal-inner,
+  .contact-inner{
+    min-width: 0;
+  }
+}
+
+/* Phones: one-column layout, no fixed desktop dimensions. */
+@media screen and (max-width: 767px) {
+  body { padding-top: 72px; }
+  .site-header { height: 72px; }
+
+  .nav-wrap {
+    width: 100%;
+    height: 72px;
+    padding: 0 14px;
+    gap: 8px;
+  }
+
+  .brand { min-width: 0; }
+  .brand img { width: 78px; height: auto; }
+  .brand span {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .desktop-nav,
+  .nav-cta { display: none !important; }
+
+  .nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .nav-right > .language-dropdown { display: block !important; }
+  .nav-right > .language-dropdown .lang-btn,
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    flex: 0 0 40px;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  .menu-toggle span {
+    display: block !important;
+    width: 18px !important;
+    height: 2px !important;
+    margin: 0 !important;
+    flex: 0 0 2px;
+  }
+
+  .mobile-nav {
+    left: 10px;
+    right: 10px;
+    top: 72px;
+    width: auto;
+    max-width: none;
+  }
+
+  .academy-hero-exact {
+    margin-top: 0 !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    overflow: hidden;
+  }
+
+  .academy-hero-main {
+    width: 100% !important;
+    padding: 42px 14px 15px !important;
+    display: flex;
+  }
+
+  .academy-hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .academy-hero-copy h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 12vw, 60px) !important;
+    letter-spacing: -2px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .academy-hero-copy > p {
+    width: 100%;
+    max-width: 560px !important;
+  }
+
+  .academy-hero-buttons {
+    width: 100% !important;
+    max-width: 100%;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .academy-hero-buttons a,
+  .academy-hero-buttons button {
+    width: 100% !important;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .academy-four-kids {
+    width: 100% !important;
+    max-width: 560px;
+    height: auto !important;
+    margin: 14px auto 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .academy-four-kids .hero-kid {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    transform: none !important;
+    border-width: 5px;
+  }
+
+  .academy-four-kids:before { display: none; }
+
+  .academy-hero-trust {
+    width: 100% !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .trust-items {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 14px;
+  }
+
+  .discover,
+  .philosophy,
+  .classes-reference,
+  .faq,
+  .contact,
+  .process,
+  .student-gallery-fullbleed {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .discover-heading,
+  .philosophy-inner,
+  .classes-ref-heading,
+  .faq-heading,
+  .faq-layout,
+  .contact-head,
+  .contact-card,
+  .student-gallery-header {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .discover-title-wrap h2,
+  .classes-ref-heading h2,
+  .faq-heading h2,
+  .contact-head h2 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .discover-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .discover-card {
+    width: 100% !important;
+    max-width: 620px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .discover-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .philosophy-inner { gap: 30px !important; }
+  .philosophy-visual,
+  .philosophy-content { width: 100% !important; min-width: 0 !important; }
+
+  .classes-ref-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .classes-ref-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important;
+  }
+
+  .classes-ref-card .ref-card-main {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    min-width: 0 !important;
+  }
+
+  .classes-ref-card .ref-card-title,
+  .classes-ref-card .ref-syllabus,
+  .classes-ref-card .ref-card-action {
+    min-width: 0 !important;
+    max-width: 100%;
+  }
+
+  .classes-ref-card .ref-card-photo {
+    width: 135px !important;
+    height: 135px !important;
+    min-width: 135px !important;
+    min-height: 135px !important;
+    max-width: 135px !important;
+    max-height: 135px !important;
+    margin: 0 auto !important;
+  }
+
+  .process {
+    display: block !important;
+  }
+
+  .process-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .process-step {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    min-width: 0 !important;
+  }
+
+  .process-line { display: none !important; }
+
+  .student-gallery-mosaic,
+  .footer-main {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .gallery-tile-main,
+  .footer-brand { grid-column: auto !important; }
+  .grow-journey-inner { width: 100% !important; grid-template-columns: 1fr !important; }
+
+  .contact-main,
+  .contact-details { min-width: 0 !important; max-width: 100% !important; }
+
+  .faq-item summary { min-width: 0; }
+  .faq-question,
+  .faq-answer p,
+  .contact-intro,
+  .discover-copy p { overflow-wrap: anywhere; }
+}
+
+@media screen and (max-width: 380px) {
+  .nav-wrap { padding-left: 10px; padding-right: 10px; }
+  .brand img { width: 72px; }
+  .brand span { display: none; }
+  .nav-right { gap: 4px; }
+
+  .academy-hero-main { padding-left: 10px !important; padding-right: 10px !important; }
+  .academy-hero-copy h1 { font-size: 39px !important; }
+  .trust-items { grid-template-columns: 1fr !important; }
+
+  .discover,
+  .philosophy,
+  .classes-reference,
+  .faq,
+  .contact,
+  .process,
+  .student-gallery-fullbleed { padding-left: 10px !important; padding-right: 10px !important; }
+
+  .classes-ref-card { padding: 15px !important; }
+}
+
+/* =========================================================
+   FINAL iPAD POLISH — 768px to 1024px
+   Compact spacing + comfortable navigation for iPad.
+   ========================================================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Header: use the compact mobile-style navigation on iPad
+     so the menu never feels squeezed. */
+  body { padding-top: 72px; }
+  .site-header { height: 72px; }
+  .nav-wrap {
+    width: 100%;
+    height: 72px;
+    padding: 0 22px;
+    gap: 12px;
+  }
+  .desktop-nav,
+  .nav-cta { display: none !important; }
+  .brand img { width: 88px; height: auto; }
+  .nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .nav-right > .language-dropdown { display: block !important; }
+  .nav-right > .language-dropdown .lang-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    padding: 7px;
+    justify-content: center;
+  }
+  .menu-toggle {
+    display: flex !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    flex: 0 0 42px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px !important;
+  }
+  .menu-toggle span {
+    width: 18px !important;
+    height: 2px !important;
+    margin: 0 !important;
+    background: #fff;
+    border-radius: 99px;
+    flex: 0 0 2px;
+  }
+
+  .mobile-nav {
+    top: 72px;
+    left: 22px;
+    right: 22px;
+    width: auto;
+    max-width: none;
+    padding: 14px 22px 20px;
+  }
+  .mobile-nav > a {
+    padding: 15px 4px;
+    font-size: 13px;
+  }
+  .mobile-nav .mobile-cta {
+    margin-top: 14px;
+    padding: 13px 18px;
+  }
+
+  /* Reduce the large desktop whitespace on iPad. */
+  .discover {
+    padding: 62px 28px 52px !important;
+  }
+  .discover-heading {
+    margin-bottom: 28px;
+  }
+  .discover-cards {
+    gap: 18px;
+    padding: 2px 4px 16px;
+  }
+  .discover-card {
+    flex-basis: min(66vw, 560px);
+    width: min(66vw, 560px);
+  }
+  .discover-image {
+    height: 255px;
+    min-height: 255px;
+  }
+  .discover-image img {
+    height: 210px;
+  }
+  .discover-copy {
+    padding-top: 2px;
+  }
+  .discover-copy h3 {
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+  .discover-copy p {
+    min-height: 0;
+    margin-bottom: 12px;
+  }
+  .discover-footer {
+    margin-top: 42px;
+  }
+
+  /* Philosophy: bring image/content closer together. */
+  .philosophy {
+    padding: 62px 28px 58px !important;
+  }
+  .philosophy-inner {
+    gap: 28px !important;
+  }
+  .philosophy-visual {
+    min-height: 430px;
+    width: min(100%, 620px);
+  }
+  .philosophy-photo-frame {
+    height: 390px;
+    width: 84%;
+  }
+  .philosophy-sticker {
+    width: 112px;
+    height: 112px;
+    top: 28px;
+  }
+  .philosophy-content {
+    padding: 0;
+  }
+  .philosophy-content h2 {
+    margin-bottom: 18px;
+  }
+  .philosophy-lead {
+    margin-bottom: 20px;
+  }
+
+  /* Classes: tighter top spacing and more balanced cards. */
+  .classes-reference {
+    padding-top: 62px !important;
+    padding-bottom: 50px !important;
+  }
+  .classes-ref-heading {
+    margin-bottom: 26px;
+  }
+  .classes-ref-grid {
+    gap: 16px;
+    padding-bottom: 14px;
+  }
+  .classes-ref-card {
+    flex-basis: min(72vw, 680px);
+    width: min(72vw, 680px);
+  }
+
+  .process {
+    padding-top: 58px !important;
+    padding-bottom: 52px !important;
+  }
+}
+
+/* =========================================================
+   IPAD TOUCH / DRAG SCROLL
+   Horizontal cards can be swiped directly with a finger or
+   dragged with a mouse/trackpad in Chrome Device Toolbar.
+   Arrows are visual direction indicators only.
+========================================================= */
+@media (min-width: 761px) and (max-width: 1199px) {
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+    touch-action: pan-x !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* The arrows remain as a visual hint, never a required control. */
+  .swipe-hint,
+  .swipe-hint .swipe-arrow {
+    pointer-events: none !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL IPAD SWIPE INDICATOR + VERTICAL PAGE SCROLL
+   Arrows are shown ONLY on iPad/tablet (768px-1024px).
+   Phones and desktop use direct horizontal scrolling with no arrows.
+   Vertical page scrolling remains available on every layout.
+========================================================= */
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  min-height: 100%;
+}
+
+/* Never show the direction indicators on phone or desktop. */
+@media screen and (max-width: 767px), screen and (min-width: 1025px) {
+  .swipe-hint {
+    display: none !important;
+  }
+}
+
+/* iPad only: orange < > direction indicators. */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .classes-reference,
+  .discover,
+  .process {
+    position: relative;
+  }
+
+  .swipe-hint {
+    display: flex !important;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .swipe-arrow {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px;
+    border: 0 !important;
+    border-radius: 50%;
+    display: grid !important;
+    place-items: center;
+    background: var(--orange, #F7931E) !important;
+    color: #fff !important;
+    box-shadow: 0 5px 15px rgba(20, 30, 40, .16);
+    font-size: 12px !important;
+    pointer-events: none !important;
+  }
+
+  /* Keep the horizontal card tracks swipeable while allowing
+     vertical gestures to pass through to the page. */
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    touch-action: pan-x pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain;
+  }
+}
+
+/* =========================================================
+   FINAL SCROLL FIX — iPAD / TOUCH
+   Native horizontal swipe only. No JS wheel/drag hijacking,
+   preventing double movement while keeping page vertical scroll.
+========================================================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    scroll-snap-type: x mandatory !important;
+    overscroll-behavior-x: contain !important;
+    overscroll-behavior-y: auto !important;
+    touch-action: pan-x pan-y !important;
+    scrollbar-width: none !important;
+  }
+
+  .classes-ref-grid::-webkit-scrollbar,
+  .discover-cards::-webkit-scrollbar,
+  .process-visual::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .classes-ref-card,
+  .discover-card,
+  .process-step {
+    scroll-snap-stop: always;
+  }
+}
+
+/* Phones: native swipe, no arrow controls, vertical page scroll stays free. */
+@media screen and (max-width: 767px) {
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    scroll-snap-type: x mandatory !important;
+    overscroll-behavior-x: contain !important;
+    overscroll-behavior-y: auto !important;
+    touch-action: pan-x pan-y !important;
+    scrollbar-width: none !important;
+  }
+
+  .classes-ref-grid::-webkit-scrollbar,
+  .discover-cards::-webkit-scrollbar,
+  .process-visual::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+/* Never let the document itself be horizontally dragged. */
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior-x: none !important;
+}
+
+/* =========================================================
+   FINAL NATIVE SCROLL FIX
+   - Only the document owns the vertical scrollbar.
+   - Horizontal card tracks own horizontal scrolling only.
+   - No forced overflow-y on html/body and no CSS snap/smooth
+     animation on touch tracks, preventing double/jumpy scroll.
+========================================================= */
+html {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px), screen and (max-width: 767px) {
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+    overscroll-behavior-x: contain !important;
+    overscroll-behavior-y: auto !important;
+    touch-action: pan-x pan-y !important;
+    scrollbar-width: none !important;
+  }
+
+  .classes-ref-grid::-webkit-scrollbar,
+  .discover-cards::-webkit-scrollbar,
+  .process-visual::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .classes-ref-card,
+  .discover-card,
+  .process-step {
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
+  }
+}
+
+/* Desktop remains a normal page with one vertical document scroll. */
+@media screen and (min-width: 1025px) {
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+  }
+}
+
+
+/* =========================================================
+   SINGLE SCROLLER FINAL PATCH — LAST RULES
+   One vertical page scroller only. Horizontal card tracks
+   remain native touch scrollers. No CSS smooth animation
+   during touch scrolling and no snap that can cause jumps.
+========================================================= */
+html {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100% !important;
+  scroll-behavior: auto !important;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 100% !important;
+  height: auto !important;
+  overflow: visible !important;
+  overscroll-behavior: auto !important;
+}
+
+@media screen and (max-width: 1199px) {
+  html { scroll-behavior: auto !important; }
+
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+    scroll-snap-stop: normal !important;
+    overscroll-behavior: auto !important;
+    touch-action: pan-x pan-y !important;
+    scrollbar-width: none !important;
+  }
+
+  .classes-ref-grid::-webkit-scrollbar,
+  .discover-cards::-webkit-scrollbar,
+  .process-visual::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+  }
+
+  .classes-ref-card,
+  .discover-card,
+  .process-step {
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    overflow-x: clip !important;
+    overflow-y: auto !important;
+  }
+  body { overflow: visible !important; }
+}
+
+
+/* =========================================================
+   iPAD HORIZONTAL SWIPE — TRUE OVERFLOW TRACKS
+   The cards must be wider than the viewport so native horizontal
+   scrolling is actually available. Vertical page scrolling remains
+   native and is never hijacked.
+========================================================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .classes-ref-grid,
+  .discover-cards,
+  .process-visual {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+    overscroll-behavior-x: contain !important;
+    overscroll-behavior-y: auto !important;
+    scrollbar-width: none !important;
+    cursor: grab;
+  }
+
+  .classes-ref-grid::-webkit-scrollbar,
+  .discover-cards::-webkit-scrollbar,
+  .process-visual::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .classes-ref-card {
+    flex: 0 0 min(72vw, 680px) !important;
+    width: min(72vw, 680px) !important;
+    min-width: min(72vw, 680px) !important;
+    max-width: min(72vw, 680px) !important;
+  }
+
+  .discover-card {
+    flex: 0 0 min(66vw, 560px) !important;
+    width: min(66vw, 560px) !important;
+    min-width: min(66vw, 560px) !important;
+    max-width: min(66vw, 560px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .process-step {
+    flex: 0 0 min(42vw, 360px) !important;
+    width: min(42vw, 360px) !important;
+    min-width: min(42vw, 360px) !important;
+    max-width: min(42vw, 360px) !important;
+  }
+
+  /* iPad: susunan teks proses dibuat konsisten dan rapi */
+  .process-step {
+    display: grid !important;
+    grid-template-columns: 30px 58px minmax(120px, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 10px !important;
+    row-gap: 4px !important;
+    align-items: center !important;
+    text-align: left !important;
+  }
+
+  .process-step > span {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    align-self: center !important;
+    display: block !important;
+    margin: 0 !important;
+    font-size: 9px !important;
+    line-height: 1 !important;
+    letter-spacing: 0.08em !important;
+    text-align: center !important;
+  }
+
+  .process-step .process-dot {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 58px !important;
+    height: 58px !important;
+    margin: 0 !important;
+  }
+
+  .process-step h3 {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    align-self: center !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+  .process-step p {
+    grid-column: 3 !important;
+    grid-row: 2 !important;
+    width: auto !important;
+    max-width: 180px !important;
+    margin: 0 !important;
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    font-weight: 400 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-wrap: pretty !important;
+  }
+
+  .classes-ref-grid.is-pointer-dragging,
+  .discover-cards.is-pointer-dragging,
+  .process-visual.is-pointer-dragging {
+    cursor: grabbing !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+  }
+}

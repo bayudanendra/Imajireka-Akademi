@@ -1,0 +1,51 @@
+/* =========================================================
+   IMAJIREKA - ANIMATIONS
+   SCROLL REVEAL
+   Dipakai untuk konten yang muncul ketika masuk viewport
+   (lihat initScrollAnimations() di js/script.js).
+========================================================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-34px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.scroll-reveal-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(34px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.scroll-reveal-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    .scroll-reveal,
+    .scroll-reveal-left,
+    .scroll-reveal-right {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
