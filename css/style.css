@@ -1375,7 +1375,8 @@ p{line-height:1.75}
 }
 .journey-steps{
   display:grid;
-  grid-template-columns:1fr 42px 1fr 42px 1fr;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:42px;
   align-items:stretch;
 }
 .journey-step{
@@ -1392,11 +1393,11 @@ p{line-height:1.75}
   letter-spacing:-2px;
   color:#d8d1c8;
 }
-.journey-step:nth-of-type(3) .journey-step-number{
+.journey-step:nth-of-type(2) .journey-step-number{
   color:#d2dce5;
 }
-.journey-step:nth-of-type(5) .journey-step-number{
-  color:#e8cbc8;
+.journey-step:nth-of-type(3) .journey-step-number{
+  color:#ddd5ce;
 }
 .journey-step-content{
   padding-top:2px;
@@ -1409,11 +1410,11 @@ p{line-height:1.75}
   font-weight:800;
   margin-bottom:17px;
 }
-.journey-step:nth-of-type(3) .journey-step-label{
+.journey-step:nth-of-type(2) .journey-step-label{
   color:#4b718f;
 }
-.journey-step:nth-of-type(5) .journey-step-label{
-  color:#c7443e;
+.journey-step:nth-of-type(3) .journey-step-label{
+  color:#b9654d;
 }
 .journey-step h3{
   margin:0 0 10px;
@@ -1427,41 +1428,6 @@ p{line-height:1.75}
   color:#777;
   font-size:9.5px;
   line-height:1.7;
-}
-.journey-arrow{
-  align-self:center;
-  justify-self:center;
-  width:36px;
-  height:36px;
-  border:1px solid #d8d1c8;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  color:var(--orange);
-  font-size:14px;
-}
-.grow-bottom{
-  display:flex;
-  align-items:center;
-  gap:25px;
-  margin:25px auto 0;
-  max-width:800px;
-}
-.grow-bottom span{
-  height:1px;
-  flex:1;
-  background:#ddd7ce;
-}
-.grow-bottom p{
-  margin:0;
-  white-space:nowrap;
-  color:#89909a;
-  font-size:7px;
-  letter-spacing:2.5px;
-}
-.grow-bottom b{
-  color:var(--orange);
-  margin:0 5px;
 }
 @media(max-width:850px){
   .grow-journey{
@@ -1484,9 +1450,6 @@ p{line-height:1.75}
     min-height:auto;
     padding:28px 0;
     border-bottom:1px solid #e5dfd7;
-  }
-  .journey-arrow{
-    display:none;
   }
 }
 @media(max-width:600px){
@@ -1512,13 +1475,6 @@ p{line-height:1.75}
   }
   .journey-step p{
     font-size:9px;
-  }
-  .grow-bottom{
-    gap:12px;
-  }
-  .grow-bottom p{
-    font-size:5.5px;
-    letter-spacing:1.2px;
   }
 }
 
