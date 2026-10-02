@@ -181,7 +181,6 @@ p{line-height:1.75}
   color:#666;
   margin:0 0 15px;
 }
-.academy-hero-kicker:first-letter{color:var(--orange)}
 
 /* Main visual is BELOW the centered copy, matching the supplied reference. */
 @media(max-width:600px){
