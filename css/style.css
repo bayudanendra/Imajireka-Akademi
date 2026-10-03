@@ -654,190 +654,6 @@ p{line-height:1.75}
 }
 
 /* =========================================================
-   PHILOSOPHY V2 — playful editorial / learning philosophy
-   ========================================================= */
-.philosophy{
-  background:#f3eee6;
-  padding:105px 5vw;
-  position:relative;
-  overflow:hidden;
-}
-.philosophy:before{
-  content:"";
-  position:absolute;
-  width:540px;height:540px;
-  border-radius:50%;
-  background:#fff9ef;
-  left:-300px;top:-180px;
-}
-.philosophy:after{
-  content:"";
-  position:absolute;
-  width:260px;height:260px;
-  border-radius:50%;
-  background:#ffe0b7;
-  right:-140px;bottom:-120px;
-}
-.philosophy-inner{
-  max-width:1220px;
-  margin:auto;
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:85px;
-  align-items:center;
-}
-.philosophy-visual{
-  min-height:610px;
-  position:relative;
-}
-.philosophy-photo-frame{
-  position:absolute;
-  left:5%;
-  top:20px;
-  width:82%;
-  height:545px;
-  overflow:hidden;
-  border-radius:8px 80px 8px 80px;
-  background:#ddd;
-  box-shadow:18px 20px 0 #e5d9ca;
-}
-.philosophy-photo-frame img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-.philosophy-sticker{
-  position:absolute;
-  z-index:4;
-  right:0;
-  top:65px;
-  width:130px;
-  height:130px;
-  border-radius:50%;
-  background:var(--orange);
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  transform:rotate(8deg);
-  box-shadow:0 12px 25px rgba(80,54,25,.16);
-}
-.philosophy-sticker span{
-  font-size:8px;
-  letter-spacing:2px;
-  font-weight:800;
-}
-.philosophy-sticker strong{
-  font-family:var(--font-heading);
-  font-size:27px;
-  line-height:.82;
-  text-align:center;
-  margin-top:5px;
-}
-.philosophy-content{
-  padding:20px 0;
-}
-.philosophy-content .mini-label{margin-bottom:16px}
-.philosophy-content h2{
-  font-size:clamp(46px,5vw,69px);
-  line-height:.96;
-  letter-spacing:-2.5px;
-  margin:0 0 24px;
-}
-.philosophy-content h2 span{
-  color:var(--orange);
-}
-.philosophy-lead{
-  color:#707070;
-  font-size:11px;
-  line-height:1.8;
-  max-width:500px;
-  margin:0 0 28px;
-}
-.philosophy-principles{
-  border-top:1px solid #d6ccc0;
-}
-.principle{
-  display:grid;
-  grid-template-columns:45px 1fr;
-  gap:14px;
-  padding:15px 0;
-  border-bottom:1px solid #d6ccc0;
-  transition:.25s;
-}
-.principle:hover{
-  padding-left:7px;
-}
-.principle-no{
-  width:32px;
-  height:32px;
-  border:1px solid #cfc4b7;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  color:var(--orange);
-  font-size:8px;
-  font-weight:800;
-  background:#fffaf3;
-}
-.principle h3{
-  font-size:17px;
-  margin:0 0 3px;
-}
-.principle p{
-  margin:0;
-  color:#888;
-  font-size:8.5px;
-  line-height:1.6;
-  max-width:410px;
-}
-@media(max-width:900px){
-  .philosophy-inner{
-    grid-template-columns:1fr;
-    gap:65px;
-  }
-  .philosophy-visual{
-    min-height:540px;
-    max-width:650px;
-    width:100%;
-    margin:auto;
-  }
-  .philosophy-photo-frame{
-    width:85%;
-    height:490px;
-  }
-  .philosophy-content{max-width:700px;margin:auto}
-}
-@media(max-width:600px){
-  .philosophy{padding:75px 20px}
-  .philosophy-inner{gap:45px}
-  .philosophy-visual{min-height:390px}
-  .philosophy-photo-frame{
-    left:2%;
-    top:12px;
-    width:88%;
-    height:350px;
-    border-radius:6px 45px 6px 45px;
-    box-shadow:11px 12px 0 #e5d9ca;
-  }
-  .philosophy-sticker{
-    width:92px;height:92px;
-    right:0;top:30px;
-  }
-  .philosophy-sticker span{font-size:6px}
-  .philosophy-sticker strong{font-size:20px}
-  .philosophy-content h2{font-size:45px;letter-spacing:-1.8px}
-  .philosophy-lead{font-size:10px}
-  .principle{grid-template-columns:39px 1fr}
-  .principle h3{font-size:16px}
-  .principle p{font-size:8px}
-}
-
-/* =========================================================
    KELAS REFERENCE — exact visual direction from supplied
    reference, adapted to the existing Imajireka stylesheet.
    ========================================================= */
@@ -910,184 +726,6 @@ p{line-height:1.75}
 .classes-ref-footer{margin:28px 0 0;flex-wrap:wrap;justify-content:center;row-gap:6px}
 .classes-ref-footer p{font-size:9px;letter-spacing:1px;white-space:normal;text-align:center;max-width:230px;margin:0 auto}
 .classes-ref-footer span{display:none}
-}
-
-/* =========================================================
-   THE EXPERIENCE — minimal editorial redesign
-   ========================================================= */
-.experience-minimal{
-  background:#f7f3ed;
-  padding:115px 5vw 95px;
-  position:relative;
-  overflow:hidden;
-}
-.experience-minimal-inner{max-width:1220px;margin:auto}
-.experience-heading{
-  display:grid;
-  grid-template-columns:1.05fr .75fr;
-  gap:100px;
-  align-items:end;
-  margin-bottom:52px;
-}
-.experience-heading .mini-label{margin-bottom:19px}
-.experience-heading h2{
-  margin:0;
-  font-size:clamp(52px,5.5vw,76px);
-  line-height:.94;
-  letter-spacing:-3px;
-}
-.experience-heading h2 em{color:var(--orange);font-style:normal}
-.experience-heading-copy{
-  max-width:400px;
-  margin:0 0 4px;
-  color:#6e6a64;
-  font-size:12px;
-  line-height:1.8;
-}
-.experience-feature{
-  display:grid;
-  grid-template-columns:1.65fr .65fr;
-  min-height:420px;
-  background:#fff;
-  border:1px solid #e3ddd5;
-  border-radius:22px;
-  overflow:hidden;
-}
-.experience-photo{
-  position:relative;
-  min-height:420px;
-  overflow:hidden;
-}
-.experience-photo:after{
-  content:"";
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.38));
-}
-.experience-photo img{
-  width:100%;height:100%;object-fit:cover;
-  display:block;
-}
-.experience-photo-caption{
-  position:absolute;
-  z-index:2;
-  left:30px;bottom:27px;
-  color:#fff;
-}
-.experience-photo-caption span{
-  display:block;
-  font-size:7px;
-  font-weight:800;
-  letter-spacing:2px;
-  margin-bottom:8px;
-}
-.experience-photo-caption strong{
-  font-size:25px;
-  line-height:1.05;
-  letter-spacing:-.5px;
-}
-.experience-side{
-  padding:42px 34px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.experience-side-label{
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:2px;
-  color:var(--orange);
-  margin-bottom:22px;
-}
-.experience-side p{
-  margin:0;
-  color:#57534e;
-  font-size:16px;
-  line-height:1.8;
-}
-.experience-side a{
-  margin-top:28px;
-  color:#222;
-  font-size:12px;
-  font-weight:800;
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-}
-.experience-side a i{color:var(--orange)}
-.experience-points{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  margin-top:24px;
-  border-top:1px solid #d9d1c8;
-  border-bottom:1px solid #d9d1c8;
-}
-.experience-points article{
-  display:grid;
-  grid-template-columns:38px 1fr;
-  gap:14px;
-  padding:28px 28px 27px 0;
-}
-.experience-points article+article{
-  padding-left:28px;
-  border-left:1px solid #d9d1c8;
-}
-.experience-points article>span{
-  font-size:9px;
-  font-weight:800;
-  color:var(--orange);
-  padding-top:3px;
-}
-.experience-points h3{
-  margin:0 0 7px;
-  font-size:18px;
-  letter-spacing:-.4px;
-}
-.experience-points p{
-  margin:0;
-  color:#77716a;
-  font-size:9px;
-  line-height:1.65;
-  max-width:260px;
-}
-@media(max-width:850px){
-  .experience-heading{grid-template-columns:1fr;gap:20px}
-  .experience-feature{grid-template-columns:1fr}
-  .experience-photo{min-height:360px}
-  .experience-side{padding:30px}
-}
-@media(max-width:650px){
-  .experience-minimal{padding:80px 20px 65px}
-  .experience-heading h2{font-size:48px;letter-spacing:-2px}
-  .experience-heading-copy{font-size:10px}
-  .experience-photo{min-height:280px}
-  .experience-photo-caption{left:20px;bottom:20px}
-  .experience-photo-caption strong{font-size:20px}
-  .experience-side{padding:27px 22px}
-  .experience-side p{font-size:14px}
-  .experience-points{grid-template-columns:1fr}
-  .experience-points article,.experience-points article+article{
-    padding:20px 0;
-    border-left:0;
-  }
-  .experience-points article+article{border-top:1px solid #d9d1c8}
-}
-
-/* The Experience — reduce photo scale while keeping the same layout */
-.experience-feature{
-  grid-template-columns:1.28fr .72fr;
-  min-height:350px;
-  max-width:1100px;
-  margin:0 auto;
-}
-.experience-photo{min-height:350px}
-.experience-side{padding:34px 30px}
-.experience-photo-caption{left:25px;bottom:22px}
-@media(max-width:850px){
-  .experience-feature{grid-template-columns:1fr;max-width:none}
-  .experience-photo{min-height:320px}
-}
-@media(max-width:650px){
-  .experience-photo{min-height:250px}
 }
 
 /* =========================================================
@@ -1323,158 +961,6 @@ p{line-height:1.75}
   .student-gallery-tagline{gap:10px;flex-wrap:wrap;justify-content:center;row-gap:6px}
   .student-gallery-tagline p{font-size:9px;letter-spacing:1px;white-space:normal;text-align:center;max-width:230px;margin:0 auto}
   .student-gallery-tagline span{display:none}
-}
-
-/* =========================================================
-   GROW WITH US — From Curious to Confident
-   Clean editorial journey section.
-   ========================================================= */
-.grow-journey{
-  background:#fffdf9;
-  padding:115px 5vw 90px;
-  overflow:hidden;
-}
-.grow-journey-inner{
-  max-width:1280px;
-  margin:0 auto;
-}
-.grow-journey-head{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:90px;
-  align-items:end;
-}
-.grow-title .mini-label{
-  margin-bottom:20px;
-}
-.grow-title h2{
-  margin:0;
-  font-size:clamp(52px,5.5vw,76px);
-  line-height:.95;
-  letter-spacing:-3px;
-}
-.grow-title h2 span{
-  color:var(--orange);
-}
-.grow-intro{
-  max-width:420px;
-  padding-bottom:6px;
-}
-.grow-intro p{
-  margin:0;
-  color:#69717c;
-  font-size:13px;
-  line-height:1.7;
-}
-.journey-line{
-  width:100%;
-  height:1px;
-  background:#ddd7ce;
-  margin:58px 0 0;
-}
-.journey-steps{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:42px;
-  align-items:stretch;
-}
-.journey-step{
-  padding:32px 10px 30px 0;
-  display:grid;
-  grid-template-columns:70px 1fr;
-  gap:20px;
-  min-height:220px;
-}
-.journey-step-number{
-  font-size:45px;
-  line-height:1;
-  font-weight:800;
-  letter-spacing:-2px;
-  color:#d8d1c8;
-}
-.journey-step:nth-of-type(2) .journey-step-number{
-  color:#d2dce5;
-}
-.journey-step:nth-of-type(3) .journey-step-number{
-  color:#ddd5ce;
-}
-.journey-step-content{
-  padding-top:2px;
-}
-.journey-step-label{
-  display:inline-block;
-  color:var(--orange);
-  font-size:8px;
-  letter-spacing:2px;
-  font-weight:800;
-  margin-bottom:17px;
-}
-.journey-step:nth-of-type(2) .journey-step-label{
-  color:#4b718f;
-}
-.journey-step:nth-of-type(3) .journey-step-label{
-  color:#b9654d;
-}
-.journey-step h3{
-  margin:0 0 10px;
-  font-size:25px;
-  line-height:1.05;
-  letter-spacing:-.8px;
-}
-.journey-step p{
-  margin:0;
-  max-width:245px;
-  color:#777;
-  font-size:9.5px;
-  line-height:1.7;
-}
-@media(max-width:850px){
-  .grow-journey{
-    padding:90px 5vw 70px;
-  }
-  .grow-journey-head{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-  .grow-intro{
-    padding:0;
-  }
-  .journey-steps{
-    grid-template-columns:1fr;
-  }
-  .journey-line{
-    margin-top:42px;
-  }
-  .journey-step{
-    min-height:auto;
-    padding:28px 0;
-    border-bottom:1px solid #e5dfd7;
-  }
-}
-@media(max-width:600px){
-  .grow-journey{
-    padding:78px 20px 58px;
-  }
-  .grow-title h2{
-    font-size:46px;
-    letter-spacing:-2px;
-  }
-  .grow-intro p{
-    font-size:11px;
-  }
-  .journey-step{
-    grid-template-columns:52px 1fr;
-    gap:15px;
-  }
-  .journey-step-number{
-    font-size:34px;
-  }
-  .journey-step h3{
-    font-size:22px;
-  }
-  .journey-step p{
-    font-size:9px;
-  }
 }
 
 /* =========================================================
@@ -1782,12 +1268,12 @@ p{line-height:1.75}
    Navbar reference: 5vw horizontal gutter.
    ========================================================= */
 .discover-inner,
-.philosophy-inner,
+
 .classes-reference-inner,
-.experience-minimal-inner,
+
 .student-gallery-header,
 .student-gallery-bottom,
-.grow-journey-inner,
+
 .faq-inner,
 .contact-inner{
   width:100%;
@@ -1807,9 +1293,9 @@ p{line-height:1.75}
 /* These sections already use the page gutter; this prevents their
    narrower inner wrappers from creating a second, smaller alignment. */
 .discover-inner,
-.philosophy-inner,
-.experience-minimal-inner,
-.grow-journey-inner,
+
+
+
 .faq-inner,
 .contact-inner{
   margin-left:0;
@@ -1835,35 +1321,6 @@ p{line-height:1.75}
   }
 }
 
-
-/* =========================================================
-   PHILOSOPHY ALIGNMENT FIX
-   Match the navbar's left/right page gutter exactly.
-   ========================================================= */
-.philosophy{
-  padding-left:max(5vw,24px);
-  padding-right:max(5vw,24px);
-}
-.philosophy-inner{
-  width:100%;
-  max-width:none;
-  margin-left:0;
-  margin-right:0;
-  box-sizing:border-box;
-}
-.philosophy-visual{
-  width:100%;
-}
-.philosophy-photo-frame{
-  left:0;
-  width:86%;
-}
-@media(max-width:600px){
-  .philosophy{
-    padding-left:24px;
-    padding-right:24px;
-  }
-}
 
 
 /* =========================================================
@@ -1921,21 +1378,21 @@ p{line-height:1.75}
 /* Body/descriptive text across the website */
 p:not(.mini-label),
 .process-step p,
-.footer-brand p,
-.experience-side p,
-.contact-intro,
+  .footer-brand p,
+  .contact-intro,
+
 .contact-main > p {
   font-size: 15px !important;
   line-height: 1.75;
 }
 
 /* Small supporting text / captions */
-.experience-photo-caption strong,
+
 .gallery-tile-main .gallery-meta h3,
 .ref-card-title p{
   font-size: 15px !important;
 }
-.experience-photo-caption span,
+
 .gallery-meta p {
   font-size: 12px !important;
 }
@@ -1954,14 +1411,10 @@ p:not(.mini-label),
   p:not(.mini-label),
   .process-step p,
   .footer-brand p,
-  .experience-side p,
   .contact-intro,
   .contact-main > p {
     font-size: 14px !important;
     line-height: 1.7;
-  }
-  .experience-photo-caption strong{
-    font-size: 14px !important;
   }
 }
 

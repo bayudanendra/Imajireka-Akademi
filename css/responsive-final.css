@@ -17,9 +17,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .desktop-nav { gap: 14px; }
   .desktop-nav a { font-size: 9px; }
   .academy-hero-main { padding-inline: 32px; }
-  .discover, .philosophy, .classes-reference, .faq, .contact { padding-left: 32px; padding-right: 32px; }
-  .philosophy-inner { gap: 45px; }
-  .philosophy-photo-frame { width: 88%; }
+  .discover, .classes-reference, .faq, .contact { padding-left: 32px; padding-right: 32px; }
   .classes-ref-heading { grid-template-columns: 1fr .7fr; }
   .classes-ref-grid { grid-template-columns: 1fr; }
   .classes-ref-card { min-width: 0; }
@@ -27,7 +25,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .process-title { text-align: center; }
   .process-visual { grid-template-columns: repeat(5, minmax(0,1fr)); }
   .student-gallery-mosaic { grid-template-columns: 1fr 1fr; }
-  .grow-journey { grid-template-columns: 1fr; }
   .contact-head { gap: 45px; }
   .footer-main { grid-template-columns: 1.5fr 1fr 1fr; gap: 30px; }
 }
@@ -125,7 +122,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     gap: 14px 25px;
   }
 
-  .discover, .philosophy, .classes-reference, .faq, .contact {
+  .discover, .classes-reference, .faq, .contact {
     padding-left: 24px; padding-right: 24px;
   }
   .discover { padding-top: 75px; }
@@ -139,14 +136,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .discover-title-wrap p { margin-left: 0; }
   .discover-cards { grid-template-columns: 1fr; gap: 30px; }
   .discover-card { max-width: 620px; width: 100%; margin-inline: auto; }
-
-  .philosophy { padding-top: 75px; padding-bottom: 75px; }
-  .philosophy-inner { grid-template-columns: 1fr; gap: 45px; }
-  .philosophy-visual { min-height: 480px; width: min(100%, 620px); margin-inline: auto; }
-  .philosophy-photo-frame { width: 86%; height: 430px; left: 0; }
-  .philosophy-sticker { right: 0; top: 35px; }
-  .philosophy-content { width: 100%; }
-  .philosophy-content h2 { font-size: clamp(46px, 9vw, 70px); }
 
   .classes-reference { padding-top: 75px; }
   .classes-ref-heading {
@@ -172,7 +161,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .student-gallery-header { grid-template-columns: 1fr; gap: 20px; }
   .student-gallery-mosaic { grid-template-columns: 1fr 1fr; }
   .gallery-tile-main { grid-column: span 2; }
-  .grow-journey-inner { grid-template-columns: 1fr; }
 
   .faq { padding-top: 75px; }
   .faq-heading { grid-template-columns: 1fr; gap: 20px; }
@@ -225,7 +213,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .trust-items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .trust-items span { font-size: 8px; line-height: 1.35; }
 
-  .discover, .philosophy, .classes-reference, .faq, .contact {
+  .discover, .classes-reference, .faq, .contact {
     padding-left: 16px; padding-right: 16px;
   }
   .discover { padding-top: 60px; padding-bottom: 55px; }
@@ -237,19 +225,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .discover-copy h3 { font-size: 30px; }
   .discover-copy p { font-size: 9px; }
   .discover-footer { flex-wrap: wrap; gap: 8px; }
-
-  .philosophy { padding-top: 60px; padding-bottom: 60px; }
-  .philosophy-inner { gap: 30px; }
-  .philosophy-visual { min-height: 350px; }
-  .philosophy-photo-frame { height: 315px; width: 88%; border-radius: 8px 48px 8px 48px; }
-  .philosophy-sticker { width: 95px; height: 95px; top: 20px; }
-  .philosophy-sticker strong { font-size: 20px; }
-  .philosophy-content h2 { font-size: clamp(40px, 11vw, 56px); letter-spacing: -2px; }
-  .philosophy-lead { font-size: 10px !important; line-height: 1.7; }
-  .philosophy-principles { gap: 0; }
-  .principle { grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 0; }
-  .principle h3 { font-size: 16px; }
-  .principle p { font-size: 9px; line-height: 1.55; }
 
   .classes-reference { padding-top: 60px; padding-bottom: 55px; }
   .classes-ref-heading h2 { font-size: clamp(43px, 11vw, 59px); }
@@ -282,7 +257,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .gallery-tile { min-height: 230px; }
   .gallery-category { flex-wrap: wrap; gap: 7px; }
   .gallery-category button { font-size: 8px; padding: 7px 10px; }
-  .grow-journey-inner { grid-template-columns: 1fr; }
 
   .faq { padding: 60px 16px 50px; }
   .faq-heading h2 { font-size: clamp(43px, 11vw, 60px); letter-spacing: -2px; }
@@ -318,7 +292,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .academy-hero-copy h1 { font-size: 40px; }
   .academy-four-kids .hero-kid { height: 145px !important; }
   .trust-items { grid-template-columns: 1fr; }
-  .discover, .philosophy, .classes-reference, .faq, .contact,
+  .discover, .classes-reference, .faq, .contact,
   .student-gallery-fullbleed, .process{ padding-left: 12px; padding-right: 12px; }
   .faq-item summary { grid-template-columns: 25px 1fr 27px; }
 }
@@ -326,7 +300,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* Avoid accidental horizontal overflow from decorative elements. */
 @media (max-width: 850px) {
   .academy-hero-bg, .discover:before, .discover:after,
-  .philosophy:before, .philosophy:after,
   .classes-reference:before, .classes-reference:after,
   .faq-side:after { pointer-events: none; }
 }
@@ -1069,42 +1042,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   }
 }
 
-/* ===== EXPERIENCE SECTION — enlarge section title and bold CTA ===== */
-.experience-side-label {
-  font-size: 13px !important;
-  line-height: 1.4 !important;
-  letter-spacing: 2.2px !important;
-}
-
-.experience-side a {
-  font-size: 16px !important;
-  line-height: 1.45 !important;
-  font-weight: 800 !important;
-}
-
-@media (max-width: 850px) {
-  .experience-side-label {
-    font-size: 12px !important;
-    letter-spacing: 1.8px !important;
-  }
-
-  .experience-side a {
-    font-size: 16px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .experience-side-label {
-    font-size: 11px !important;
-    letter-spacing: 1.7px !important;
-  }
-
-  .experience-side a {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-  }
-}
-
 
 /* Smooth scrolling for normal page navigation */
 html {
@@ -1138,14 +1075,13 @@ footer,
 header,
 .hero,
 .academy-hero-exact,
-.academy-hero-main,
-.discover,
-.philosophy,
-.classes-reference,
-.process,
-.experience-minimal,
-.student-gallery-fullbleed,
-.grow-journey,
+  .academy-hero-main,
+  .discover,
+  .classes-reference,
+  .process,
+  .student-gallery-fullbleed,
+
+
 .faq,
 .contact {
   max-width: 100%;
@@ -1160,7 +1096,6 @@ img, svg, video, iframe, canvas {
 
   .academy-hero-main,
   .discover,
-  .philosophy,
   .classes-reference,
   .faq,
   .contact,
@@ -1173,9 +1108,7 @@ img, svg, video, iframe, canvas {
   .academy-hero-copy,
   .academy-hero-main,
   .discover-inner,
-  .philosophy-inner,
   .classes-reference-inner,
-  .experience-minimal-inner,
   .contact-inner{
     min-width: 0;
   }
@@ -1328,7 +1261,6 @@ img, svg, video, iframe, canvas {
   }
 
   .discover,
-  .philosophy,
   .classes-reference,
   .faq,
   .contact,
@@ -1342,7 +1274,6 @@ img, svg, video, iframe, canvas {
   }
 
   .discover-heading,
-  .philosophy-inner,
   .classes-ref-heading,
   .faq-heading,
   .faq-layout,
@@ -1382,10 +1313,6 @@ img, svg, video, iframe, canvas {
     width: 100%;
     max-width: 100%;
   }
-
-  .philosophy-inner { gap: 30px !important; }
-  .philosophy-visual,
-  .philosophy-content { width: 100% !important; min-width: 0 !important; }
 
   .classes-ref-grid {
     display: flex !important;
@@ -1456,7 +1383,6 @@ img, svg, video, iframe, canvas {
 
   .gallery-tile-main,
   .footer-brand { grid-column: auto !important; }
-  .grow-journey-inner { width: 100% !important; grid-template-columns: 1fr !important; }
 
   .contact-main,
   .contact-details { min-width: 0 !important; max-width: 100% !important; }
@@ -1479,7 +1405,6 @@ img, svg, video, iframe, canvas {
   .trust-items { grid-template-columns: 1fr !important; }
 
   .discover,
-  .philosophy,
   .classes-reference,
   .faq,
   .contact,
@@ -1601,36 +1526,6 @@ img, svg, video, iframe, canvas {
   }
   .discover-footer {
     margin-top: 42px;
-  }
-
-  /* Philosophy: bring image/content closer together. */
-  .philosophy {
-    padding: 62px 28px 58px !important;
-  }
-  .philosophy-inner {
-    gap: 28px !important;
-  }
-  .philosophy-visual {
-    min-height: 430px;
-    width: min(100%, 620px);
-  }
-  .philosophy-photo-frame {
-    height: 390px;
-    width: 84%;
-  }
-  .philosophy-sticker {
-    width: 112px;
-    height: 112px;
-    top: 28px;
-  }
-  .philosophy-content {
-    padding: 0;
-  }
-  .philosophy-content h2 {
-    margin-bottom: 18px;
-  }
-  .philosophy-lead {
-    margin-bottom: 20px;
   }
 
   /* Classes: tighter top spacing and more balanced cards. */
