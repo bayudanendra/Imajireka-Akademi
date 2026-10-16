@@ -32,6 +32,7 @@ p{line-height:1.75}
 .site-header{position:fixed;z-index:1000;top:0;left:0;right:0;height:78px;background:rgba(255,253,249,.93);backdrop-filter:blur(15px);border-bottom:1px solid rgba(34,34,34,.07)}
 .nav-wrap{height:78px;max-width:1440px;margin:auto;padding:0 max(5vw,24px);display:flex;align-items:center;gap:40px}
 .brand{display:flex;align-items:center;gap:8px;color:var(--ink);flex-shrink:0}
+.brand a{display:flex;color:inherit}
 .brand img{width:102px}
 .brand span{font-size:8px;letter-spacing:2px;font-weight:800;border-left:1px solid #bbb;padding-left:9px}
 .desktop-nav{display:flex;align-items:center;gap:25px;margin-left:auto}
@@ -613,7 +614,7 @@ p{line-height:1.75}
   color:#777;
 }
 .discover-footer p b{
-  color:var(--orange);
+  color:inherit;
 }
 .discover-footer>i{
   position:absolute;

@@ -10,16 +10,20 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/responsive-final.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 <header class="site-header">
   <div class="nav-wrap">
-    <a class="brand" href="#home" aria-label="Imajireka Akademi">
-      <img src="assets/IMAJIREKA LOGO PANJANG.svg" alt="Imajireka">
-      <span>AKADEMI</span>
-    </a>
+    <div class="brand">
+      <a href="https://imajireka.com/" aria-label="Imajireka">
+        <img src="assets/IMAJIREKA LOGO PANJANG.svg" alt="Imajireka">
+      </a>
+      <a href="#home" aria-label="Imajireka Akademi">
+        <span>AKADEMI</span>
+      </a>
+    </div>
 
     <nav class="desktop-nav">
       <a href="#home" class="active">Beranda</a>
@@ -91,7 +95,7 @@
           <a href="#classes" class="hero-cta-primary">
             Lihat Kelas <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <button type="button" class="hero-cta-secondary" data-video-open aria-haspopup="dialog">
+          <button type="button" class="hero-cta-secondary" data-video-open data-video-ratio="portrait" aria-haspopup="dialog">
             <b><i class="fa-solid fa-play"></i></b>
             Lihat Video
           </button>
@@ -100,16 +104,16 @@
 
       <div class="academy-four-kids">
         <div class="hero-kid kid-1">
-          <img src="assets/kids1.png" alt="Anak tersenyum sambil menunjuk ke atas">
+          <img src="assets/kids1.webp" alt="Anak tersenyum sambil menunjuk ke atas">
         </div>
         <div class="hero-kid kid-2">
-          <img src="assets/kids2.png" alt="Peserta menggambar di tablet">
+          <img src="assets/kids2.webp" alt="Peserta menggambar di tablet">
         </div>
         <div class="hero-kid kid-3">
-          <img src="assets/kids3.png" alt="Peserta menunjukkan hasil gambar digital">
+          <img src="assets/kids3.webp" alt="Peserta menunjukkan hasil gambar digital">
         </div>
         <div class="hero-kid kid-4">
-          <img src="assets/kids4.png" alt="Peserta belajar ilustrasi digital">
+          <img src="assets/kids4.webp" alt="Peserta belajar ilustrasi digital">
         </div>
 
         <div class="hero-note-card note-card-left">
@@ -151,7 +155,7 @@
         <article class="discover-card card-illustration">
           <div class="discover-image">
             <div class="image-blob"></div>
-            <img loading="lazy" src="assets/ilustrasi.png" alt="Anak menggambar ilustrasi di tablet">
+            <img loading="lazy" src="assets/ilustrasi.webp" alt="Anak menggambar ilustrasi di tablet">
             <span class="image-icon"><i class="fa-solid fa-pencil"></i></span>
           </div>
           <div class="discover-copy">
@@ -163,7 +167,7 @@
         <article class="discover-card card-design">
           <div class="discover-image">
             <div class="image-blob"></div>
-            <img loading="lazy" src="assets/desain karakter.png" alt="Peserta mendesain karakter di tablet">
+            <img loading="lazy" src="assets/desain karakter.webp" alt="Peserta mendesain karakter di tablet">
             <span class="image-icon"><i class="fa-solid fa-bezier-curve"></i></span>
           </div>
           <div class="discover-copy">
@@ -175,7 +179,7 @@
         <article class="discover-card card-build">
           <div class="discover-image">
             <div class="image-blob"></div>
-            <img loading="lazy" src="assets/animasi.png" alt="Peserta menunjukkan karya digital di tablet">
+            <img loading="lazy" src="assets/animasi.webp" alt="Peserta menunjukkan karya digital di tablet">
             <span class="image-icon"><i class="fa-solid fa-rocket"></i></span>
           </div>
           <div class="discover-copy">
@@ -209,7 +213,7 @@
       <div class="mentor-grid">
         <article class="mentor-card">
           <div class="mentor-photo">
-            <img loading="lazy" src="assets/yuda-bento-poster.png" alt="Foto Yuda Bento">
+            <img loading="lazy" src="assets/yuda-bento-poster.webp" alt="Foto Yuda Bento">
           </div>
           <div class="mentor-info">
             <h3>Yuda Bento</h3>
@@ -218,7 +222,7 @@
             <button type="button" class="mentor-video-btn" data-video-open
               data-video-type="file"
               data-video-src="assets/yuda-bento.mp4"
-              data-video-poster="assets/yuda-bento-poster.jpg"
+              data-video-poster="assets/yuda-bento-poster.webp"
               data-video-ratio="portrait"
               aria-haspopup="dialog"
               aria-label="Putar video perkenalan Yuda Bento">
@@ -229,7 +233,7 @@
 
         <article class="mentor-card">
           <div class="mentor-photo">
-            <img loading="lazy" src="assets/prema-poster.jpeg" alt="Foto Prema">
+            <img loading="lazy" src="assets/prema-poster.webp" alt="Foto Prema">
           </div>
           <div class="mentor-info">
             <h3>Prema</h3>
@@ -238,7 +242,7 @@
             <button type="button" class="mentor-video-btn" data-video-open
               data-video-type="file"
               data-video-src="assets/prema.mp4"
-              data-video-poster="assets/prema-poster.jpeg"
+              data-video-poster="assets/prema-poster.webp"
               data-video-ratio="portrait"
               aria-haspopup="dialog"
               aria-label="Putar video perkenalan Prema">
@@ -249,7 +253,7 @@
 
         <article class="mentor-card">
           <div class="mentor-photo">
-            <img loading="lazy" src="assets/ngurah-yudha-poster.png" alt="Foto Ngurah Yudha">
+            <img loading="lazy" src="assets/ngurah-yudha-poster.webp" alt="Foto Ngurah Yudha">
           </div>
           <div class="mentor-info">
             <h3>Ngurah Yudha</h3>
@@ -258,7 +262,7 @@
             <button type="button" class="mentor-video-btn" data-video-open
               data-video-type="file"
               data-video-src="assets/ngurah-yudha.mp4"
-              data-video-poster="assets/ngurah-yudha-poster.jpg"
+              data-video-poster="assets/ngurah-yudha-poster.webp"
               data-video-ratio="portrait"
               aria-haspopup="dialog"
               aria-label="Putar video perkenalan Ngurah Yudha">
@@ -291,7 +295,7 @@
               <p>Untuk pemula. Kenali alat digital, bentuk dasar, dan cara bercerita lewat gambar.</p>
             </div>
             <div class="ref-card-photo">
-              <img loading="lazy" src="assets/imajireka-academy7.jpeg" alt="Peserta belajar di kelas Imajireka Akademi">
+              <img loading="lazy" src="assets/imajireka-academy7.webp" alt="Peserta belajar di kelas Imajireka Akademi">
             </div>
           </div>
           <div class="ref-syllabus">
@@ -316,7 +320,7 @@
               <p>Memperdalam ilustrasi karakter, dari proporsi dan pose sampai desain kostum.</p>
             </div>
             <div class="ref-card-photo">
-              <img loading="lazy" src="assets/imajireka-academy8.jpeg" alt="Peserta belajar ilustrasi digital">
+              <img loading="lazy" src="assets/imajireka-academy8.webp" alt="Peserta belajar ilustrasi digital">
             </div>
           </div>
           <div class="ref-syllabus">
@@ -341,7 +345,7 @@
               <p>Membuat karakter orisinal dan dunianya, lalu mengenal industri.</p>
             </div>
             <div class="ref-card-photo">
-              <img loading="lazy" src="assets/imajireka-academy1.jpeg" alt="Mentor mendampingi peserta di kelas">
+              <img loading="lazy" src="assets/imajireka-academy1.webp" alt="Mentor mendampingi peserta di kelas">
             </div>
           </div>
           <div class="ref-syllabus">
@@ -420,7 +424,7 @@
 
     <div class="student-gallery-mosaic">
       <article class="gallery-tile gallery-tile-main">
-        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy4.jpeg" alt="Barong Study karya siswa">
+        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy4.webp" alt="Barong Study karya siswa">
         <div class="gallery-tile-overlay"></div>
         <span class="gallery-category">Ilustrasi</span>
         <div class="gallery-meta">
@@ -430,7 +434,7 @@
       </article>
 
       <article class="gallery-tile">
-        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy1.jpeg" alt="Karya siswa Makhluk Mitologi">
+        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy1.webp" alt="Karya siswa Makhluk Mitologi">
         <div class="gallery-tile-overlay"></div>
         <span class="gallery-category">Desain Karakter</span>
         <div class="gallery-meta">
@@ -440,7 +444,7 @@
       </article>
 
       <article class="gallery-tile">
-        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy.jpeg" alt="Karya siswa Eksperimen Visual">
+        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy.webp" alt="Karya siswa Eksperimen Visual">
         <div class="gallery-tile-overlay"></div>
         <span class="gallery-category">Seni Digital</span>
         <div class="gallery-meta">
@@ -450,7 +454,7 @@
       </article>
 
       <article class="gallery-tile">
-        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy5.jpeg" alt="Karya siswa Cerita Kecil">
+        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy5.webp" alt="Karya siswa Cerita Kecil">
         <div class="gallery-tile-overlay"></div>
         <span class="gallery-category">Bercerita</span>
         <div class="gallery-meta">
@@ -460,7 +464,7 @@
       </article>
 
       <article class="gallery-tile">
-        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy2.jpeg" alt="Karya siswa Dunia Tenang">
+        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy2.webp" alt="Karya siswa Dunia Tenang">
         <div class="gallery-tile-overlay"></div>
         <span class="gallery-category">Seni Konsep</span>
         <div class="gallery-meta">
@@ -470,7 +474,7 @@
       </article>
 
       <article class="gallery-tile">
-        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy3.jpeg" alt="Karya siswa Eksplorasi Karakter">
+        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy3.webp" alt="Karya siswa Eksplorasi Karakter">
         <div class="gallery-tile-overlay"></div>
         <span class="gallery-category">Desain Karakter</span>
         <div class="gallery-meta">
@@ -480,7 +484,7 @@
       </article>
 
       <article class="gallery-tile gallery-tile-ocean">
-        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy6.jpeg" alt="Karya siswa Mimpi Laut">
+        <img loading="lazy" class="gallery-lightbox-trigger" tabindex="0" role="button" src="assets/imajireka-academy6.webp" alt="Karya siswa Mimpi Laut">
         <div class="gallery-tile-overlay"></div>
         <span class="gallery-category">Seni Digital</span>
         <div class="gallery-meta">
@@ -520,13 +524,13 @@
             data-video-type="file"
             data-video-ratio="portrait"
             data-video-src="assets/wawancara_mama_gianka.mp4"
-            data-video-poster="assets/thumbnail mama gianka.png"
+            data-video-poster="assets/thumbnail mama gianka.webp"
             aria-label="Putar video testimoni Mama Gianka">
-            <img loading="lazy" src="assets/thumbnail mama gianka.png" alt="Video testimoni Mama Gianka, orang tua siswa Imajireka Akademi">
+            <img loading="lazy" src="assets/thumbnail mama gianka.webp" alt="Video testimoni Mama Gianka, orang tua siswa Imajireka Akademi">
             <span class="testimonial-play"><i class="fa-solid fa-play"></i></span>
           </button>
           <div class="testimonial-video-meta">
-            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail mama gianka.png" alt="Foto Mama Gianka">
+            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail mama gianka.webp" alt="Foto Mama Gianka">
             <div>
               <strong>Mama Gianka</strong>
               <span>Orang Tua Siswa, Level Mulai</span>
@@ -539,13 +543,13 @@
             data-video-type="file"
             data-video-ratio="portrait"
             data-video-src="assets/wawancara mama aozora.mp4"
-            data-video-poster="assets/thumbnail mama aozora.png"
+            data-video-poster="assets/thumbnail mama aozora.webp"
             aria-label="Putar video testimoni Mama Aozora">
-            <img loading="lazy" src="assets/thumbnail mama aozora.png" alt="Video testimoni Mama Aozora, orang tua siswa Imajireka Akademi">
+            <img loading="lazy" src="assets/thumbnail mama aozora.webp" alt="Video testimoni Mama Aozora, orang tua siswa Imajireka Akademi">
             <span class="testimonial-play"><i class="fa-solid fa-play"></i></span>
           </button>
           <div class="testimonial-video-meta">
-            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail mama aozora.png" alt="Foto Mama Aozora">
+            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail mama aozora.webp" alt="Foto Mama Aozora">
             <div>
               <strong>Mama Aozora</strong>
               <span>Orang Tua Siswa, Level Tumbuh</span>
@@ -558,13 +562,13 @@
             data-video-type="file"
             data-video-ratio="portrait"
             data-video-src="assets/wawancara mama cello.mp4"
-            data-video-poster="assets/thumbnail mama cello.png"
+            data-video-poster="assets/thumbnail mama cello.webp"
             aria-label="Putar video testimoni Mama Cello">
-            <img loading="lazy" src="assets/thumbnail mama cello.png" alt="Video testimoni Mama Cello, orang tua siswa Imajireka Akademi">
+            <img loading="lazy" src="assets/thumbnail mama cello.webp" alt="Video testimoni Mama Cello, orang tua siswa Imajireka Akademi">
             <span class="testimonial-play"><i class="fa-solid fa-play"></i></span>
           </button>
           <div class="testimonial-video-meta">
-            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail mama cello.png" alt="Foto Mama Cello">
+            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail mama cello.webp" alt="Foto Mama Cello">
             <div>
               <strong>Mama Cello</strong>
               <span>Orang Tua Siswa, Level Mulai</span>
@@ -577,13 +581,13 @@
             data-video-type="file"
             data-video-ratio="portrait"
             data-video-src="assets/wawancara_papa_deva.mp4"
-            data-video-poster="assets/thumbnail papa deva.png"
+            data-video-poster="assets/thumbnail papa deva.webp"
             aria-label="Putar video testimoni Papa Deva">
-            <img loading="lazy" src="assets/thumbnail papa deva.png" alt="Video testimoni Papa Deva, orang tua siswa Imajireka Akademi">
+            <img loading="lazy" src="assets/thumbnail papa deva.webp" alt="Video testimoni Papa Deva, orang tua siswa Imajireka Akademi">
             <span class="testimonial-play"><i class="fa-solid fa-play"></i></span>
           </button>
           <div class="testimonial-video-meta">
-            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail papa deva.png" alt="Foto Papa Deva">
+            <img class="testimonial-avatar" loading="lazy" src="assets/thumbnail papa deva.webp" alt="Foto Papa Deva">
             <div>
               <strong>Papa Deva</strong>
               <span>Orang Tua Siswa</span>
@@ -621,7 +625,7 @@
           <div class="faq-side-mark">?</div>
           <h3>Ragu memilih<br>level?</h3>
           <p>Ceritakan minat dan pengalaman menggambar anak. Tim Imajireka akan membantu.</p>
-          <a href="#contact" class="faq-side-btn">Tanya Level <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="faq-side-btn">Tanya Tim Kami <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
         <div class="faq-list">
