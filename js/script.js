@@ -272,6 +272,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   const ID = {};
   const ATTR_EN = {
+    "Logo Imajireka": "Imajireka Logo",
+    "Logo Imajireka Putih": "White Imajireka Logo",
+    "Bendera Indonesia": "Indonesian Flag",
+    "Bendera Inggris": "British Flag",
     "Imajireka": "Imajireka",
     "Indonesia": "Indonesia",
     "Anak tersenyum sambil menunjuk ke atas": "Smiling child pointing upward",
@@ -301,6 +305,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "Video testimoni Papa Deva, orang tua siswa Imajireka Akademi": "Testimonial video from Papa Deva, parent of an Imajireka Academy student"
   };
   const ARIA_EN = {
+    "Pilih Bahasa": "Select Language",
+    "Navigasi utama": "Main navigation",
+    "Navigasi seluler": "Mobile navigation",
+    "Imajireka": "Imajireka",
     "Imajireka Akademi": "Imajireka Academy",
     "Buka menu": "Open menu",
     "Putar video perkenalan Yuda Bento": "Play intro video of Yuda Bento",
@@ -386,12 +394,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.querySelector("title");
     if (title) title.textContent = toEnglish
       ? "Imajireka Academy | Digital Illustration & Animation Courses"
-      : "Imajireka Akademi | Kursus Digital Ilustrasi & Animasi";
+      : "Imajireka Akademi | Kursus Ilustrasi Digital & Animasi";
 
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", toEnglish
-      ? "Imajireka Academy, digital illustration and animation courses for children and teens in Bali. Learn through hands-on practice with mentor guidance."
-      : "Imajireka Akademi, kursus ilustrasi digital dan animasi untuk anak dan remaja di Bali. Belajar lewat praktik langsung dengan bimbingan mentor.");
+      ? "Imajireka Academy offers digital illustration and animation courses in Bali for kids and teens, featuring hands-on practice guided by mentors."
+      : "Imajireka Akademi adalah kursus ilustrasi digital dan animasi di Bali untuk anak dan remaja, dengan praktik langsung dan bimbingan mentor.");
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", toEnglish
+      ? "Imajireka Academy | Digital Illustration & Animation Courses"
+      : "Imajireka Akademi | Kursus Ilustrasi Digital & Animasi");
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", toEnglish
+      ? "Digital illustration and animation courses in Bali for children and teens, with hands-on practice guided by mentors."
+      : "Kursus ilustrasi digital dan animasi di Bali untuk anak dan remaja, dengan praktik langsung dan bimbingan mentor.");
+
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute("content", toEnglish
+      ? "Imajireka Academy | Digital Illustration & Animation Courses"
+      : "Imajireka Akademi | Kursus Ilustrasi Digital & Animasi");
+
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute("content", toEnglish
+      ? "Digital illustration and animation courses in Bali for children and teens, with hands-on practice guided by mentors."
+      : "Kursus ilustrasi digital dan animasi di Bali untuk anak dan remaja, dengan praktik langsung dan bimbingan mentor.");
   }
 
   function updateLanguageUI(lang) {
@@ -401,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const current = document.querySelector(".lang-btn img");
     if (current) {
       current.src = isEnglish ? "assets/flags/england.svg" : "assets/flags/indonesia.svg";
-      current.alt = isEnglish ? "English" : "Indonesia";
+      current.alt = isEnglish ? "British Flag" : "Bendera Indonesia";
     }
 
     const buttons = document.querySelectorAll(".lang-menu button");

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Ganti YOUR_DOMAIN_HERE dengan domain produksi final setelah hosting aktif.
+# Contoh: Sitemap: https://akademi.imajireka.com/sitemap.xml
+Sitemap: https://YOUR_DOMAIN_HERE/sitemap.xml
